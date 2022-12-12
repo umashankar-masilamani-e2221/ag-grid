@@ -21807,9 +21807,10 @@ var GridBodyScrollFeature = /** @class */ (function (_super) {
         });
     };
     GridBodyScrollFeature.prototype.addScrollListener = function () {
-        var fakeHScroll = this.ctrlsService.getFakeHScrollCtrl();
-        this.addManagedListener(this.centerRowContainerCtrl.getViewportElement(), 'scroll', this.onCenterViewportScroll.bind(this));
-        this.addManagedListener(fakeHScroll.getViewport(), 'scroll', this.onFakeHorizontalScroll.bind(this));
+        //  var fakeHScroll = this.ctrlsService.getFakeHScrollCtrl();
+        //  this.addManagedListener(this.centerRowContainerCtrl.getViewportElement(), 'scroll', this.onCenterViewportScroll.bind(this));
+        //  this.addManagedListener(fakeHScroll.getViewport(), 'scroll', this.onFakeHorizontalScroll.bind(this));
+        
         var onVerticalScroll = this.gridOptionsWrapper.isDebounceVerticalScrollbar() ?
             debounce(this.onVerticalScroll.bind(this), 100)
             : this.onVerticalScroll.bind(this);
